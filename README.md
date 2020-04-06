@@ -31,21 +31,21 @@ Responder as rotas:
 Rota: http://project-2.com/
 Tipo: HEAD
 Resposta: Header 'Access-Control-Allow-Origin' presente e com valor '\*'
-Comando: curl -w "%{http_code}" -s -X HEAD 'http://project-2.com/'
+Comando: curl -I 'http://project-2.com/'
 ```
 
 ```
 Rota: http://project-2.com/static-files
 Tipo: HEAD
 Resposta: Header 'Access-Control-Allow-Origin' presente e com valor 'http://project-2.com'
-Comando: curl -w "%{http_code}" -s -X HEAD 'http://project-2.com/static-files'
+Comando: curl -I 'http://project-2.com/static-files'
 ```
 
 ```
 Rota: http://project-2.com/whoami
 Tipo: HEAD
 Resposta: Header 'Project-Name' presente e com valor 'project-2'
-Comando: curl -w "%{http_code}" -s -X HEAD 'http://project-2.com/whoami'
+Comando: curl -I 'http://project-2.com/whoami'
 ```
 
 ```
